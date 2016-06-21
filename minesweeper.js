@@ -82,8 +82,8 @@ Board.prototype.onBoard = function (pos) {
   return (
     pos[0] >= 0 && pos[0] < this.gridSize &&
       pos[1] >= 0 && pos[1] < this.gridSize
-  )
-}
+  );
+};
 
 Board.prototype.plantBombs = function () {
   var totalPlantedBombs = 0;
@@ -91,7 +91,7 @@ Board.prototype.plantBombs = function () {
     var row = Math.floor(Math.random() * (this.gridSize - 1));
     var col = Math.floor(Math.random() * (this.gridSize - 1));
 
-    tile = this.grid[row][col];
+    let tile = this.grid[row][col];
     if (!tile.bombed) {
       tile.plantBomb();
       totalPlantedBombs++;
